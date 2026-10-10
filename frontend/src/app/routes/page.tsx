@@ -75,9 +75,9 @@ export default function PlannerPage() {
         setCandidates(res.candidates);
         if (res.candidates.length > 0) {
            setSelectedRouteId(res.candidates[0].id);
-           drawRoutes(res.candidates);
+           await drawRoutes(res.candidates);
         } else {
-           drawRoutes([]);
+           await drawRoutes([]);
         }
     } catch (err: any) {
         setError(err.message || 'Failed to fetch routes');
@@ -86,7 +86,7 @@ export default function PlannerPage() {
     }
   };
 
-  const drawRoutes = (routes: RouteCandidate[]) => {
+  const drawRoutes = async (routes: RouteCandidate[]) => {
       if (!mapRef.current || !mapReady) return;
       const map = mapRef.current;
       
@@ -100,7 +100,7 @@ export default function PlannerPage() {
       
       if (!routes.length) return;
 
-      const maplibregl = require('maplibre-gl');
+      const maplibregl = await import('maplibre-gl');
       
       // Draw new routes (drawing safest / selected ones slightly differently if we wanted to, 
       // but for now let's draw them all, putting fastest/safest in different colors)

@@ -12,3 +12,5 @@ pytest
 pytest-asyncio
 respx
 shapely
+google-genai
+pytest-mock
