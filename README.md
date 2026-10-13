@@ -2,7 +2,7 @@
 
 JalMarg is a next-generation urban waterlogging detection and routing platform designed for municipal emergency orchestration. Utilizing the official Strands Agentic Framework and Google Gemini 1.5, JalMarg automates the process of handling raw citizen photo reports, analyzing structural threats, scoring hotspot risks, mapping deterministic safe-routing schemas, and generating accountable dispatch proposals for human authorities.
 
-## The Problem
+## The Problem statement
 During severe storms, municipalities receive thousands of crowdsourced reports simultaneously. Human operators physically cannot verify every image stream, identify duplicate fakes, analyze depth variations manually, lookup correlated weather data, and coordinate local pumping assets safely in real-time. Emergency vehicles route themselves into hazards attempting to provide assistance blindly.
 
 ## Architecture
